@@ -1,0 +1,2 @@
+module EnvironnementsHelper
+end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nom: MyString
+  description: MyText
+  constructeur: MyString
+  version: MyString
+  environnement: MyString
+  image_url: MyString
+  version: 9.99
+
+two:
+  nom: MyString
+  description: MyText
+  constructeur: MyString
+  version: MyString
+  environnement: MyString
+  image_url: MyString
+  version: 9.99
