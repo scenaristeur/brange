@@ -1,0 +1,1 @@
+- 01/04/2013: premier test d'interface avec Ruby On Rails 
