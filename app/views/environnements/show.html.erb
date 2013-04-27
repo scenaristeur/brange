@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nom:</b>
+  <%= @environnement.nom %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @environnement.description %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @environnement.parent %>
+</p>
+
+<p>
+  <b>Gps:</b>
+  <%= @environnement.gps %>
+</p>
+
+<p>
+  <b>Panorama:</b>
+  <%= @environnement.panorama %>
+</p>
+
+<p>
+  <b>Reseau:</b>
+  <%= @environnement.reseau %>
+</p>
+
+<p>
+  <b>Nb acces:</b>
+  <%= @environnement.nb_acces %>
+</p>
+
+
+<%= link_to 'Edit', edit_environnement_path(@environnement) %> |
+<%= link_to 'Back', environnements_path %>

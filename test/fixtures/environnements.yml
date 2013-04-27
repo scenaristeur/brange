@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nom: MyString
+  description: MyText
+  parent: MyString
+  gps: MyString
+  panorama: MyString
+  reseau: MyString
+  nb_acces: 9.99
+
+two:
+  nom: MyString
+  description: MyText
+  parent: MyString
+  gps: MyString
+  panorama: MyString
+  reseau: MyString
+  nb_acces: 9.99

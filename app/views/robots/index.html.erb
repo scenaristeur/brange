@@ -1,0 +1,35 @@
+<h1>Listing robots</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+    <th>Constructeur</th>
+    <th>Version</th>
+    <th>Environnement</th>
+    <th>Image url</th>
+    <th>Version</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @robots.each do |robot| %>
+  <tr>
+    <td><%= robot.nom %></td>
+    <td><%= robot.description %></td>
+    <td><%= robot.constructeur %></td>
+    <td><%= robot.version %></td>
+    <td><%= robot.environnement %></td>
+    <td><%= robot.image_url %></td>
+    <td><%= robot.version %></td>
+    <td><%= link_to 'Show', robot %></td>
+    <td><%= link_to 'Edit', edit_robot_path(robot) %></td>
+    <td><%= link_to 'Destroy', robot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Robot', new_robot_path %>

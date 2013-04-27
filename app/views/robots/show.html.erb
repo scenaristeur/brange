@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nom:</b>
+  <%= @robot.nom %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @robot.description %>
+</p>
+
+<p>
+  <b>Constructeur:</b>
+  <%= @robot.constructeur %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @robot.version %>
+</p>
+
+<p>
+  <b>Environnement:</b>
+  <%= @robot.environnement %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @robot.image_url %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @robot.version %>
+</p>
+
+
+<%= link_to 'Edit', edit_robot_path(@robot) %> |
+<%= link_to 'Back', robots_path %>

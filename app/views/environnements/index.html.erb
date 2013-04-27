@@ -1,0 +1,35 @@
+<h1>Listing environnements</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+    <th>Parent</th>
+    <th>Gps</th>
+    <th>Panorama</th>
+    <th>Reseau</th>
+    <th>Nb acces</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @environnements.each do |environnement| %>
+  <tr>
+    <td><%= environnement.nom %></td>
+    <td><%= environnement.description %></td>
+    <td><%= environnement.parent %></td>
+    <td><%= environnement.gps %></td>
+    <td><%= environnement.panorama %></td>
+    <td><%= environnement.reseau %></td>
+    <td><%= environnement.nb_acces %></td>
+    <td><%= link_to 'Show', environnement %></td>
+    <td><%= link_to 'Edit', edit_environnement_path(environnement) %></td>
+    <td><%= link_to 'Destroy', environnement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Environnement', new_environnement_path %>
