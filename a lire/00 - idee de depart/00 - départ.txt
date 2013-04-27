@@ -9,3 +9,5 @@ c'est forcément un peu le bazar, mais vous y trouverez peut-être des idées ou de
 Tout contributeur est le bienvenu.
 
 Tout idée en rapport également.
+
+Le mieux , pour en discuter, c'est certainement le Wiki <a href="https://github.com/scenaristeur/drange/wiki">https://github.com/scenaristeur/drange/wiki</a>
