@@ -6,7 +6,7 @@ $droid = new Android();
 class Range{
 const _version=1;
 
-const _racine="/sdcard/_ExternalSD/Range";
+const _racine="/sdcard/Range";
 private $_robot;
 private $_robots;
 private $_instruction;
