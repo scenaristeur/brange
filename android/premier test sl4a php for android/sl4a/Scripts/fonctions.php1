@@ -1,0 +1,92 @@
+<?php
+
+function initialisation(){
+$this->_etatTexte="Initialisation";
+$this->afficheEtat();
+$this->verificationGenerale();
+$this->changeEtat(1);
+}
+
+function veille(){
+$this->_etatTexte="Veille";
+$this->afficheEtat();
+echo"Instructions en attente? priorité?\n";
+echo "Tâches planifiées ?\n";
+echo "Attente d'instruction\n";
+echo "Opportunité de recharger batteries ?\n";
+echo "phase d'apprentissage en arriere plan\n";
+$this->changeEtat(3);
+}
+
+
+function charge(){
+$this->_etatTexte="Charge";
+$this->afficheEtat();
+while($this->_charge<90){
+$this->_charge=$this->_charge+1;
+//echo $this->_charge."% ";
+}
+echo "Charge OK";
+echo "\n";
+}
+
+function observation(){
+$this->_etatTexte="Observation";
+$this->afficheEtat();
+$this->changeEtat(4);
+}
+
+function reperage(){
+$this->_etatTexte="Repérage";
+$this->afficheEtat();
+if ($this->_chercheCoordonnees==1){
+$this->locate();}
+else{echo "Localisation passée ";}
+$env= new Environnement ();
+$env->observer();
+$env->check();
+echo "Cet endroit est-il repertorié dans la base?\n";
+echo " Sinon un endroit similaire en fonction des objets reconnus(cuisine = cuisine)";
+echo "determiner les coordonnees de la piece par rapport a l.origine du batiment ,
+en abscisse ordonnee , en m et cos par rapport a l''origine, en portes (3eme porte á gauche)";
+$this->changeEtat(5);
+}
+
+function recuperationDonnees(){
+$this->_etatTexte="Récupération de données ";
+$this->afficheEtat();
+echo "verification connexion serveur\n";
+echo "connexion base\n";
+echo "identification de la piece\n";
+echo "verification des regles eventuelles applicables à la pièce ou aux objets repérés\n";
+echo "identification des changements par rapport au dernier passage\n";
+echo "demande eventuelle de confirmation des changements\n";
+echo "mise a jour eventuelle des infos du serveur relatives a la pièce et au positionnement des objets\n";
+$this->changeEtat(6);
+}
+
+function analyse(){
+$this->_etatTexte="Analyse de la pièce et des objets a ranger, des modifications par rapport a l'environnement connu";
+$this->afficheEtat();
+$this->mode();
+$this->changeEtat(7);
+}
+
+function reflexion(){
+$this->_etatTexte="Réflexion sur la méthode de rangement, la prehension, les objets inconnus trier les objets connus";
+$this->afficheEtat();
+$this->changeEtat(8);
+}
+
+function apprentissage (){
+$this->_etatTexte="Questionnement et Apprentissage";
+$this->afficheEtat();
+$this->changeEtat(9);
+}
+
+function rangement(){
+$this->_etatTexte="Rangement";
+$this->afficheEtat();
+$this->verification("humain");
+//$this->changeEtat(1);
+}
