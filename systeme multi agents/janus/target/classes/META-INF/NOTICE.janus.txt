@@ -1,0 +1,6 @@
+janus
+Copyright (c) 2013-2012 Janus Core Developers
+
+This product is distributed under the license(s):
+GNU General Public License version 3.0
+

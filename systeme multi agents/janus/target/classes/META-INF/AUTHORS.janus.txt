@@ -1,0 +1,22 @@
+This file contains the major developers and contributors. See http://www.janus-project.org/janus-demos/base-demos/helloagents for more details.
+
+1. Core Developers for janus
+
+Sebastian Rodriguez <sebastian@sebastianrodriguez.com.ar>
+Nicolas Gaud <nicolas.gaud@utbm.fr>
+St&eacute;phane Galland <stephane.galland@utbm.fr>
+
+
+
+2. Contributors for janus
+
+James Todd <gonzo@jxta.org>
+Gillan Basso <gillan.basso@utbm.fr>
+Robin Geffroy <robin.geffroy@gmail.com>
+J&eacute;r&eacute;mie Laval <jeremie.laval@gmail.com>
+Beno&icirc;t Mauduit <benoit.mauduit@gmail.com>
+Matthias Brigaud <matthias.brigaud@gmail.com>
+Renaud Buecher <renaud.buecher@utbm.fr>
+Guillaume Vinson <gui.vinson@gmail.com>
+Lionel Cabasson <marshall777@gmail.com>
+Camille Wintz <camille.wintz@live.fr>

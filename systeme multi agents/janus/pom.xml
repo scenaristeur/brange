@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>org.janus-project.demos.base</groupId>
+		<artifactId>base-demos</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>helloagents</artifactId>
+	<packaging>jar</packaging>
+	<name>Hello Agents Demo</name>
+	<inceptionYear>2013</inceptionYear>
+
+
+	<build>
+		<plugins>
+			
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Activator>org.janusproject.demos.market.simple.osgi.SimpleMarketActivator</Bundle-Activator>
+						<Include-Resource>
+							{maven-resources}, {maven-dependencies},
+							META-INF/license=target/classes/META-INF/license,
+							META-INF/AUTHORS.${project.artifactId}.txt=target/classes/META-INF/AUTHORS.janus.txt,
+							META-INF/NOTICE.${project.artifactId}.txt=target/classes/META-INF/NOTICE.janus.txt,
+						</Include-Resource>
+						<Import-Package>
+							org.janusproject.kernel*;version="${project.version}",*
+						</Import-Package>
+					</instructions>
+					<supportedProjectTypes>
+						<supportedProjectType>jar</supportedProjectType>
+						<supportedProjectType>bundle</supportedProjectType>
+						<supportedProjectType>war</supportedProjectType>
+					</supportedProjectTypes>
+					<archive>
+						<manifestFile>${manifest.file}</manifestFile>
+						<manifest>
+							<mainClass>org.janusproject.demos.market.simple.Launcher</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.janus-project.maven</groupId>
+				<artifactId>janus-maven-plugin</artifactId>
+				<configuration>
+					<layout>felix</layout>
+					<!-- The launcher will instantiate a OSGi Platform -->
+					<launcher>
+						<groupId>org.apache.felix</groupId>
+						<artifactId>org.apache.felix.main</artifactId>
+						<version>${felix.main.version}</version>
+					</launcher>
+				</configuration>
+				<executions>
+					<execution>
+						<id>executionCreateBundleDist</id>
+						<phase>package</phase>
+						<goals>
+							<goal>zip</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.janus-project.kernel</groupId>
+			<artifactId>kernel</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.janus-project.kernel</groupId>
+			<artifactId>osgi</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.janus-project.kernel</groupId>
+			<artifactId>message</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.janus-project.kernel</groupId>
+			<artifactId>logger</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.main</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
