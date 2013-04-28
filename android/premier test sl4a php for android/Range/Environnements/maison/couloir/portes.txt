@@ -1,0 +1,6 @@
+chambre 1
+salle de bains
+toilettes
+escalier grenier
+escalier extérieur
+bureau

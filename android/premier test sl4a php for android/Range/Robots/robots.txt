@@ -1,0 +1,7 @@
+vLadumir|range|0
+Robi|peintre|0
+V,Higor|range|0
+fg|peintre|0
+Robiz|range|0
+Medor|autre|0
+mesor|drone transport|0
