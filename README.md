@@ -10,4 +10,4 @@ Tout contributeur est le bienvenu.
 
 Tout idée en rapport également.
 
-Le mieux , pour en discuter, c'est certainement le Wiki <a href="https://github.com/scenaristeur/drange/wiki">https://github.com/scenaristeur/drange/wiki</a>
+Le mieux , pour en discuter, c'est certainement le Wiki <a href="https://github.com/scenaristeur/brange/wiki">https://github.com/scenaristeur/brange/wiki</a>
