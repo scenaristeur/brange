@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+C:\dev\range\test janus android\.metadata\.plugins\org.eclipse.jdt.core
+339493169.index
+1186735700.index
+4161103913.index
+498675766.index

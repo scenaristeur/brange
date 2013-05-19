@@ -1,0 +1,55 @@
+package com.example.androidjanus;
+
+import org.arakhne.vmutil.Android;
+import org.arakhne.vmutil.Android.AndroidException;
+import org.janusproject.kernel.Kernel;
+import org.janusproject.kernel.agent.Kernels;
+import org.janusproject.kernel.network.jxme.agent.JxtaJxmeKernelAgentFactory;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+public class MainActivity extends Activity {
+	 
+	  public void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.activity_main);
+	 
+	    // Initialize the Arakhne-VM-utility library to
+	    // support this Android activity.
+	    // The Arakhne-VM-utility library is used by
+	    // the Janus kernel.
+	    // (see http://www.arakhne.org/arakhneVmutils)
+	    try {
+	      Android.initialize(this);
+	    }
+	    catch (AndroidException e) {
+	      Log.e("FirstAndroidApplication", e.getLocalizedMessage(), e);
+	    }
+	    // Activation du reseau
+	    //Kernels.setPreferredKernelFactory(new JxtaJxmeKernelAgentFactory());
+	    
+	    // Create a Janus kernel
+	    Kernel janusKernel = Kernels.get(true);
+	 
+	    // Create the Hello-World agent		
+	    HelloWorldAgent agent = new HelloWorldAgent();
+	 
+	    // Launch the Hello-World agent
+	    janusKernel.launchLightAgent(agent);
+	  }
+	 
+	  protected void onDestroy() {
+	    // Comment the following line if you do not want
+	    // to kill all the Janus agents each time the
+	    // activity is destroyed.
+	    Kernels.killAll();
+	  }
+	 
+	  public boolean onCreateOptionsMenu(Menu menu) {
+	    getMenuInflater().inflate(R.menu.main, menu);
+	    return true;
+	  }
+	 
+	}

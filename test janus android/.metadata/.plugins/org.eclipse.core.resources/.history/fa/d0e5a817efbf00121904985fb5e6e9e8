@@ -1,0 +1,37 @@
+package com.example.androidjanus;
+
+import org.janusproject.kernel.agent.Agent;
+import org.janusproject.kernel.status.Status;
+import org.janusproject.kernel.status.StatusFactory;
+
+public class HelloWorldAgent extends Agent {
+	
+	public HelloWorldAgent() {
+		 
+	}
+ 
+	@Override
+	public Status activate(Object... parameters) {
+		//Initializes capacities and memory
+		//Creates or joins groups and requests roles
+		//...
+		System.out.println(this.getName());
+		return StatusFactory.ok(this);
+	}
+ 
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Status live() {
+		// In the default implementation of the live method,
+                // Janus uses an activator to schedule the various agent's
+		// But you may also override this method to implement
+                // other kinds of role scheduling or simply implements
+                //agent with adopting an organizational perspective (an agent without role)
+		Status status = super.live();
+		// Do something
+		return status;
+	}
+ 
+}

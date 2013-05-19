@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.janusproject.kernel.agent.Kernels"/>
+<fullyQualifiedTypeName name="org.janusproject.kernel.Kernel"/>
+<fullyQualifiedTypeName name="org.janusproject.kernel.agent.Agent"/>
+<fullyQualifiedTypeName name="org.janusproject.kernel.status.Status"/>
+<fullyQualifiedTypeName name="org.arakhne.vmutil.Android"/>
+<fullyQualifiedTypeName name="org.arakhne.vmutil.Android.AndroidException"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="org.janusproject.kernel.network.jxme.agent.JxtaJxmeKernelAgentFactory"/>
+<fullyQualifiedTypeName name="org.janusproject.kernel.status.StatusFactory"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+</qualifiedTypeNameHistroy>
